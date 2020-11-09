@@ -12,8 +12,8 @@ function ratio(start, until, ratio) {
       delCount++;
     }
     clear = 0;
-  } else
-    clear++;
+  }
+  clear++;
   
   function onScreen() {
     var container = document.querySelector('#clone-here');
