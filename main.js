@@ -18,13 +18,18 @@ function ratio(start, until, ratio) {
   function onScreen() {
     var container = document.querySelector('#clone-here');
     var clone = document.querySelectorAll('.clone-this');
+    
     var newClone = clone[clone.length - 1].cloneNode(true);
+    
     newClone.classList.remove('hidden');
     container.appendChild(newClone);
+    
     var printCount = document.querySelectorAll('.printCount');
     var printStart = document.querySelectorAll('.printStart');
+    
     var newPrintCount = printCount[printCount.length - 1];
     var newPrintStart = printStart[printStart.length - 1];
+    
     newPrintStart.innerHTML = start;
     newPrintCount.innerHTML = count;
   }
