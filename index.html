@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML</title>
+  <title>calculating ratio</title>
   <!-- HTML -->
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
@@ -13,11 +13,27 @@
 
 <body>
   <div id="container">
-    <legend><button onclick="callPrompt()">Calcule a progressão</button></legend>
+    <legend>Progressão Aritmética</legend>
+    <div class="button-div">
+      <button onclick="callPrompt()">Calcular</button>
+    </div>
+    <div class="main-div">
+      <div>
+        <p>Inicia</p>
+        <p id="start">- - -</p>
+      </div>
+      <div>
+        <p>Até</p>
+        <p id="until">- - -</p>
+      </div>
+      <div>
+        <p>Razão</p>
+        <p id="ratio">- - -</p>
+      </div>
+    </div>
     <table id="clone-here">
-      <tr>
-        <td>Progressão</td>
-        <td>Contador</td>
+        <th>Progressão</th>
+        <th>Contador</th>
       </tr>
       <tr class="clone-this hidden">
         <td class="printStart"></td>

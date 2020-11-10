@@ -7,6 +7,7 @@
 
 body {
   font-family: sans-serif;
+  
   width: 100vw;
   height: 100vh;
 }
@@ -17,57 +18,112 @@ body {
   height: 100%;
   
   margin: auto;
-  padding: 10px;
+  padding: 20px 0;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 18px;
+  
+  margin-bottom: 10px;
 }
 
 legend,
+.main-div div p,
+th,
 td {
   text-align: center;
 }
 
+.button-div,
+button {
+  border-radius: 10px 10px 0 0;
+}
+
+.button-div,
 button,
+.main-div,
+.main-div div,
 table,
+th,
 td {
   border: 1px solid black;
 }
 
+.button-div,
 button,
+.main-div,
 table {
   width: 100%;
 }
 
-button {
+button,
+.main-div {
   height: 40px;
-  
-  font-weight: 700;
-  font-size: 18px;
-  
+}
+
+.button-div,
+.main-div,
+table {
   background: lightgray;
-  
+}
+
+.button-div {
+  padding: 2px;
+}
+
+.button-div,
+.main-div {
   border-bottom: 0;
 }
 
-table {
-  border-top: 0;
-  margin-bottom: 30px;
+button {
+  background: lightseagreen;
   
-  background: lightgray;
+  font-size: 16px;
 }
 
+.main-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 2px;
+  
+  padding: 0 2px;
+}
+
+.main-div,
+table {
+  border-top: 0;
+}
+
+.main-div div {
+  background: lightcoral;
+}
+
+.button-div button,
+.main-div div p:first-child,
+tr:first-child th {
+  font-weight: 500;
+}
+
+table {
+  margin-bottom: 30px;
+}
+
+th,
 td {
   width: 50%
 }
 
-tr:first-child td {
+tr:first-child th {
   padding: 5px;
-  font-weight: 500;
 }
 
-tr:first-child td:first-child {
+tr:first-child th:first-child {
   background: lightsalmon;
 }
 
-tr:first-child td:last-child {
+tr:first-child th:last-child {
   background: lightblue;
 }
 

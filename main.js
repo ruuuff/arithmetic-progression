@@ -15,6 +15,19 @@ function ratio(start, until, ratio) {
   }
   clear++;
   
+  var divStart = document.querySelector("#start");
+  var divUntil = document.querySelector("#until");
+  var divRatio = document.querySelector("#ratio");
+  
+  divStart.innerHTML = start;
+  divUntil.innerHTML = until;
+  
+  var divColor = '#FFFFEF'
+  
+  divStart.style.color = divColor;
+  divUntil.style.color = divColor;
+  divRatio.style.color = divColor;
+
   function onScreen() {
     var container = document.querySelector('#clone-here');
     var clone = document.querySelectorAll('.clone-this');
@@ -36,12 +49,14 @@ function ratio(start, until, ratio) {
 
   var count = 0;
   if (start <= until) {
+    divRatio.innerHTML = "+"+ratio;
     while (start <= until) {
       onScreen();
       start += ratio;
       count++;
     }
   } else {
+    divRatio.innerHTML = "-"+ratio;
     while (start >= until) {
       onScreen();
       start -= ratio;
