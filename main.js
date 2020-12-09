@@ -1,4 +1,5 @@
 var clear = 0
+var anOrCount = 0;
 function ratio(start, until, ratio) {
   if (clear === 1) {
     var container = document.querySelector("#clone-here");
@@ -47,7 +48,7 @@ function ratio(start, until, ratio) {
     newPrintCount.innerHTML = count;
   }
 
-  var count = 0;
+  var count = anOrCount;
   if (start <= until) {
     divRatio.innerHTML = "+"+ratio;
     while (start <= until) {
@@ -107,3 +108,14 @@ function callPrompt() {
     }
   }
 }
+
+const active = document.querySelector('.term-or-count');
+active.addEventListener('click', () => {
+  active.classList.toggle('active');
+  
+  if (active.classList.contains('active')) {
+    anOrCount = 1;
+  } else {
+    anOrCount = 0;
+  }
+});

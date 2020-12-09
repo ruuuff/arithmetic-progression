@@ -125,6 +125,8 @@ tr:first-child th:first-child {
 
 tr:first-child th:last-child {
   background: lightblue;
+  cursor: pointer;
+  position: relative;
 }
 
 tr td {
@@ -133,4 +135,32 @@ tr td {
 
 tr.hidden {
   display: none;
+}
+
+th.term-or-count {
+  overflow: hidden;
+}
+
+th.term-or-count p:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top .3s ease;
+}
+
+th.term-or-count p:last-child {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top .3s ease;
+}
+
+th.term-or-count.active p:first-child {
+  top: 150%;
+}
+
+th.term-or-count.active p:last-child {
+  top: 50%;
 }
